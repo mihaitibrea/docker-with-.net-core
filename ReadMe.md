@@ -1,5 +1,3 @@
-preview in vs code CTRL+K v
-
 # Docker workshop
 
 ## Create app
@@ -10,7 +8,7 @@ preview in vs code CTRL+K v
 ## Run app
 
 1. make changes to controller
-2. remove https redirection
+2. remove https redirection to simplify demo
 3. check webapi call
 
 **dotnet run**
@@ -34,11 +32,9 @@ preview in vs code CTRL+K v
 
 ### Change aspnet port
 
+https://stackoverflow.com/questions/48669548/why-does-aspnet-core-start-on-port-80-from-within-docker/48669703
+
 * Uncomment ENV ASPNETCORE_URLS=http://+:5000
 * docker image build -t arrowapi:latest -f ./ArrowApi.dockerfile .
 * docker run -p 5000:5000 arrowapi:latest
-
-https://stackoverflow.com/questions/48669548/why-does-aspnet-core-start-on-port-80-from-within-docker/48669703
-
-
-* portainer localhost:9000 admin + password
+* portainer localhost:9000
